@@ -36,12 +36,12 @@ const Home = ({ itemsForSale, itemsForRent }) => (
       {itemsForRent.map((property) => <Property property={property} key={property.id} />)}
     </Flex>
     <Banner
-      purpose='BUY A HOME'
+      purpose='BUY ITEMS'
       title1=' Find, Buy & Own Your'
-      title2='Dream Home'
-      desc1=' Explore from Apartments, land, builder floors,'
-      desc2=' villas and more'
-      buttonText='Explore Buying'
+      title2='SECOND HAND'
+      desc1=' Explore'
+      desc2=' and more'
+      buttonText=' Massive Discount'
       linkName='/search?purpose=for-sale'
       imageUrl=''
     />
