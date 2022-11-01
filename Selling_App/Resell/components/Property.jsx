@@ -7,10 +7,10 @@ import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import millify from 'millify';
 
-import DefaultImage from '../assets/images/house.jpg';
+import DefaultImage from '../assets/images/Item.jpg';
 
-const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID  } }) => (
-  <Link href={`/property/${externalID}`} passHref>
+const Item = ({ Items: { coverPhoto, price, isVerified, externalID  } }) => (
+  <Link href={`/Items/${externalID}`} passHref>
     <Flex flexWrap='wrap' w='420px' p='5' paddingTop='0px' justifyContent='flex-start' cursor='pointer' >
       <Box>
         <Image src={coverPhoto ? coverPhoto.url : DefaultImage} width={400} height={260} />
@@ -37,4 +37,4 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
   </Link>
 );
 
-export default Property;
+export default Items;
