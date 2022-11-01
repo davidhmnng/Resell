@@ -16,7 +16,7 @@ export default function SearchFilters() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const searchProperties = (filterValues) => {
+  const searchItems = (filterValues) => {
     const path = router.pathname;
     const { query } = router;
 
@@ -48,7 +48,7 @@ export default function SearchFilters() {
     <Flex bg='gray.100' p='4' justifyContent='center' flexWrap='wrap'>
       {filters?.map((filter) => (
         <Box key={filter.queryName}>
-          <Select onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' >
+          <Select onChange={(e) => searchItems({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' >
             {filter?.items?.map((item) => (
               <option value={item.value} key={item.value}>
                 {item.name}
@@ -88,7 +88,7 @@ export default function SearchFilters() {
                   <Box
                     key={location.id}
                     onClick={() => {
-                      searchProperties({ locationExternalIDs: location.externalID });
+                      searchItems({ locationExternalIDs: location.externalID });
                       setShowLocations(false);
                       setSearchTerm(location.name);
                     }}
