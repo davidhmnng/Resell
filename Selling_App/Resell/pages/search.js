@@ -27,17 +27,17 @@ const Search = ({ properties }) => {
         justifyContent='center'
         alignItems='center'
       >
-        <Text>Search Property By Filters</Text>
+        <Text>Search Items By Filters</Text>
         <Icon paddingLeft='2' w='7' as={BsFilter} />
       </Flex>
       {searchFilters && <SearchFilters />}
       <Text fontSize='2xl' p='4' fontWeight='bold'>
-        Properties {router.query.purpose}
+        Items {router.query.purpose}
       </Text>
       <Flex flexWrap='wrap'>
-        {properties.map((property) => <Property property={property} key={property.id} />)}
+        {items.map((items) => <Items items ={items} key={items.id} />)}
       </Flex>
-      {properties.length === 0 && (
+      {items.length === 0 && (
         <Flex justifyContent='center' alignItems='center' flexDir='column' marginTop='5' marginBottom='5'>
           <Image src={noresult} />
           <Text fontSize='xl' marginTop='3'>No Result Found.</Text>
