@@ -15,16 +15,16 @@ const Navbar = () => (
         <MenuButton as={IconButton} icon={<FcMenu />} variant='outline' color='red.400' />
         <MenuList>
           <Link href='/' passHref>
-            <MenuItem icon={<FcHome />}>Home</MenuItem>
+            <MenuItem icon={<FcHome />}>Item</MenuItem>
           </Link>
           <Link href='/search' passHref>
             <MenuItem icon={<BsSearch />}>Search</MenuItem>
           </Link>
           <Link href='/search?purpose=for-sale' passHref>
-            <MenuItem icon={<FcAbout />}>Buy Property</MenuItem>
+            <MenuItem icon={<FcAbout />}>Buy Items</MenuItem>
           </Link>
           <Link href='/search?purpose=for-rent' passHref>
-            <MenuItem icon={<FiKey />}>Rent Property</MenuItem>
+            <MenuItem icon={<FiKey />}>Rent Items</MenuItem>
           </Link>
         </MenuList>
       </Menu>
