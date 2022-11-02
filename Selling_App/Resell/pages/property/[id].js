@@ -8,7 +8,7 @@ import millify from 'millify';
 import { baseUrl, fetchApi } from '../../utils/fetchApi';
 import ImageScrollbar from '../../components/ImageScrollbar';
 
-const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos } }) => (
+const PropertyDetails = ({ itemDetails: { price, rentFrequency, weight, length, weight, area, location, isVerified, description, type, purpose, furnishingStatus, additional, photos } }) => (
   <Box maxWidth='1000px' margin='auto' p='4'>
     {photos && <ImageScrollbar data={photos} />}
     <Box w='full' p='6'>
